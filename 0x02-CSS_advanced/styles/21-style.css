@@ -104,16 +104,16 @@ ul.row {
     clear: both;
 }
 
-[class^=”col-”] {
+[class*=”col-”] {
     float: left;
     padding: 0.5rem;
 }
 
-[class^=”col-”] .col-1-3 {
+[class*=”col-”] .col-1-3 {
     width: 33.33%;
 }
 
-[class^="col-"] .col-1-2 {
+[class*="col-"] .col-1-2 {
     width: 50%;
 }
 
