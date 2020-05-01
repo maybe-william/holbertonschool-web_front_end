@@ -1,5 +1,5 @@
 /* Use a media query in sass */
-$list_to_sort: john anna zoe kim felicia carrie;
+@import '103-sort_list';
 
 @function hash($str) {
     //turn a string into a list of numbers
