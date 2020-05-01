@@ -1,0 +1,29 @@
+/* Use a media query in sass */
+$to_sort: (600, 1, 3, 5, 3, 4, 5, 6);
+
+@function sort($list) {
+    @debug "in function";
+    $sorted: false;
+
+    @while not $sorted {
+        @debug "in while loop";
+        $sorted: true;
+        @for $i from 1 through length($list) {
+            @debug "in for loop";
+            @if $i > 1 {
+                @if nth($list, $i) < nth($list, $i - 1) {
+                    @debug "in the swap area";
+                    $temp: nth($list, $i);
+                    $temp2: nth($list, $i - 1);
+                    $list: set-nth($list, $i, $temp2);
+                    $list: set-nth($list, $i - 1, $temp);
+                    $sorted: false;
+                }
+            }
+        }
+        @debug $sorted;
+    }
+    @return $list;
+}
+
+@debug sort($to_sort);
