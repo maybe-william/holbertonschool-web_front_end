@@ -382,7 +382,7 @@
   /* Section ABOUT US
       ============================= */
   
-  [class*='col-'] {
+  [class^='col-'] {
     align-self: center;
   }
   
